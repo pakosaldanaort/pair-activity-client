@@ -5,6 +5,10 @@ import './App.css';
 
 class App extends Component {
   render() {
+    var buttonArray = [];
+    for (var i=0;i<50;i++) {
+      buttonArray.push(ButtonExample());
+    }
     return (
       <div className="App">
         <header className="App-header">
@@ -14,10 +18,12 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <ButtonExample></ButtonExample>
+        {buttonArray}
       </div>
     );
   }
 }
 
 export default App;
+
+// What is { } in React templates
